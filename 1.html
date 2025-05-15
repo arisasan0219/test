@@ -206,3 +206,290 @@
     </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>忠犬RYOCHANハッシュタグキャンペーン企画 - キャンペーン概要</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Michroma&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #000;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #0a0e17 0%, #101b31 100%);
+        }
+        
+        .cyber-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(74, 136, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74, 136, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 80px 120px;
+            height: 560px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 40px;
+            display: inline-block;
+            position: relative;
+            padding-left: 20px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(74, 136, 255, 0.7);
+        }
+        
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 6px;
+            background: linear-gradient(180deg, #ff3a3a, #4a88ff);
+            border-radius: 3px;
+        }
+        
+        .hashtag-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(74, 136, 255, 0.3);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hashtag-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff3a3a, #4a88ff);
+        }
+        
+        .main-hashtag {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff3a3a;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 58, 58, 0.5);
+        }
+        
+        .sub-hashtag {
+            display: inline-block;
+            background: rgba(74, 136, 255, 0.1);
+            color: #4a88ff;
+            border: 1px solid rgba(74, 136, 255, 0.3);
+            border-radius: 20px;
+            padding: 8px 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .info-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(74, 136, 255, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .info-box-title {
+            font-size: 1.1rem;
+            color: #4a88ff;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-box-title i {
+            margin-right: 10px;
+        }
+        
+        .info-box-content {
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+        
+        .concept {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .concept-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            font-family: 'Michroma', 'Noto Sans JP', sans-serif;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 58, 58, 0.7);
+            margin-bottom: 10px;
+        }
+        
+        .concept-jp {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff3a3a;
+            text-shadow: 0 0 10px rgba(255, 58, 58, 0.5);
+        }
+        
+        .red-accent {
+            position: absolute;
+            background-color: #ff3a3a;
+            box-shadow: 0 0 10px rgba(255, 58, 58, 0.7);
+        }
+        
+        .accent-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(74, 136, 255, 0.1) 0%, rgba(10, 14, 23, 0) 70%);
+            border: 1px solid rgba(74, 136, 255, 0.1);
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .page-number {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1rem;
+        }
+        
+        .ryochan-image {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 180px;
+            height: 180px;
+            opacity: 0.8;
+            transform: rotate(15deg);
+        }
+        
+        .blue-chip {
+            position: absolute;
+            width: 30px;
+            height: 8px;
+            background-color: #4a88ff;
+            box-shadow: 0 0 10px rgba(74, 136, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="cyber-grid"></div>
+        
+        <div class="red-accent" style="width: 5px; height: 80px; top: 50px; left: 50px; transform: rotate(45deg);"></div>
+        <div class="red-accent" style="width: 5px; height: 60px; bottom: 80px; right: 100px; transform: rotate(-30deg);"></div>
+        
+        <div class="blue-chip" style="top: 120px; right: 200px; transform: rotate(15deg);"></div>
+        <div class="blue-chip" style="bottom: 150px; left: 180px; transform: rotate(-10deg);"></div>
+        
+        <div class="accent-circle" style="top: -50px; left: -50px;"></div>
+        <div class="accent-circle" style="bottom: -80px; right: 100px;"></div>
+        
+        <div class="content">
+            <h2 class="section-title">キャンペーン概要</h2>
+            
+            <div class="hashtag-card">
+                <div class="main-hashtag">#忠犬RYOCHAN</div>
+                <div class="sub-hashtags">
+                    <span class="sub-hashtag">#RYOCHAN侍</span>
+                    <span class="sub-hashtag">#安全なWeb3</span>
+                    <span class="sub-hashtag">#RYOCHANをゲット</span>
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-box">
+                    <div class="info-box-title">
+                        <i class="fas fa-calendar-alt"></i>
+                        キャンペーン期間
+                    </div>
+                    <div class="info-box-content">
+                        7日間（前半5日間でプレヒート、最終2日間で集中実施）
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-box-title">
+                        <i class="fas fa-chart-line"></i>
+                        トレンド入り目標
+                    </div>
+                    <div class="info-box-content">
+                        キャンペーン6日目の20:00～22:00
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-box-title">
+                        <i class="fas fa-bullseye"></i>
+                        目的
+                    </div>
+                    <div class="info-box-content">
+                        日本発AIトークンRYOCHANの認知拡大とプリセール参加促進
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-box-title">
+                        <i class="fas fa-users"></i>
+                        ターゲット
+                    </div>
+                    <div class="info-box-content">
+                        暗号資産投資家、AIテクノロジー愛好家、日本文化ファン
+                    </div>
+                </div>
+            </div>
+            
+            <div class="concept">
+                <div class="concept-text">Bark with Courage, Bite with Honor!</div>
+                <div class="concept-jp">勇気で吠え、名誉で噛む！</div>
+            </div>
+        </div>
+        
+        <img src="https://ryochan.com/images/ryo-chan-flag.webp" alt="RYOCHAN" class="ryochan-image">
+        
+        <div class="page-number">2 / 8</div>
+    </div>
+</body>
+</html>
